@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import StoreProvider from "./StoreProvider";
+import { StoreWrapper } from "../../mobx/StoreProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      {/* <StoreProvider> */}
+      <body className={inter.className}>
+      <StoreWrapper>
+        {children}
+      </StoreWrapper>
+        </body>
+      {/* </StoreProvider> */}
     </html>
   );
 }
+
+
+// import { useContext } from "react";
+// import { StoreContext } from "@/store/provider";
+
+// export const useStores = () => {
+//   return useContext(StoreContext);
+// };

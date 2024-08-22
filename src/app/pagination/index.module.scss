@@ -1,0 +1,49 @@
+.root {
+    display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  height: 100vh;
+  overflow: scroll;
+  flex: 1;
+}
+
+.wrapper {
+  align-items: center;
+  position: relative;
+  display: flex;
+  // justify-content: flex-end;
+  flex-direction: column-reverse;
+  position: relative;
+  
+}
+
+
+.item {
+  border: 1px blue solid;
+  width: 100px;
+  height: 60px;
+  flex-shrink: 0;
+
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.backwardsTrigger {
+  height: 0px;
+  width: 100%;
+  // position: absolute;
+  // top: 100px;
+  // border: 2px red solid
+}
+
+.forwardsTrigger {
+  height: 0px;
+  width: 100%;
+  // position: absolute;
+  // bottom: 100px;
+  // border: 2px red solid
+}
